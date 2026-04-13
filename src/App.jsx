@@ -10,37 +10,27 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-      <>
+    <>
       <div id="root">
 
         <h1>ADMINISTRADOR DE PACIENTES</h1>
 
-        <div class="container">
+        <div className="container">
 
+          <div>
+            <Formulario />
+          </div>
 
-        <div>
-          <Formulario/>
+          <div>
+            <Cita/>
+          </div>
+
         </div>
 
-        <div>
-          <Cita/>
-        </div>
+      </div>
 
-        
-          <div class="row">
+    </>
+  )
+}
 
-            <div class="one-half column">
-
-              
-                  </div>
-                  <div class="one-half column">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-          </>
-          )
-  }
-
-          export default App
+export default App
