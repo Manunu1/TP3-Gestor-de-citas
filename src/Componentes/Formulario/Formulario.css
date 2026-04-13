@@ -1,0 +1,60 @@
+/* Encabezado del formulario */
+h2 {
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 1px;
+}
+
+/* Labels dentro del formulario */
+label {
+  color: white;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Inputs de tipo date y time */
+input[type="date"],
+input[type="time"] {
+  height: 38px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+/* General para inputs y textarea usando u-full-width */
+input.u-full-width,
+textarea.u-full-width {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+/* Textarea específico */
+textarea.u-full-width {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Botón primario del formulario */
+.button-primary {
+  background-color: #A445B2; /* Puedes ajustar el color */
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background-color: #D41872;
+}
