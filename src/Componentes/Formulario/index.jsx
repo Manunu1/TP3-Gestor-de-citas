@@ -5,7 +5,6 @@ function Formulario() {
 
         <div>
 
-            <h2>Crear mi Cita</h2>
 
             <form>
 

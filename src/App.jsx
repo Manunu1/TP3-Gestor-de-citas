@@ -4,10 +4,16 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import Formulario from './Componentes/Formulario'
-import Cita from './Componentes/Cita'
+import Listado from './Componentes/Listado'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const datos = [
+    ['Nina','Martin','2021-08-05','08:20','Le duele la pierna'],
+    ['Sifon','Flecha','2023-08-05','09:24','Duerme mucho'],
+    ['Floki','Ari','2023-08-05','16:15','No está comiendo']
+  ];
 
   return (
     <>
@@ -18,11 +24,13 @@ function App() {
         <div className="container">
 
           <div>
+            <h2>Crear mi cita</h2>
             <Formulario />
           </div>
 
           <div>
-            <Cita/>
+            <h2>Administra tus citas</h2>
+            <Listado ArrayCitas={datos} />
           </div>
 
         </div>

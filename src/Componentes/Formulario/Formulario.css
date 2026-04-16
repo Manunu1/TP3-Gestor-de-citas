@@ -46,15 +46,20 @@ textarea.u-full-width {
 
 /* Botón primario del formulario */
 .button-primary {
-  background-color: #A445B2; /* Puedes ajustar el color */
+  background-color: #00c7e6;
   color: white;
   border: none;
-  padding: 0.8rem 1.5rem;
+  padding: 0.9rem 1.2rem;
   margin-top: 1rem;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  width: 100%;
 }
 
 .button-primary:hover {
-  background-color: #D41872;
+  background-color: #00b6d8;
 }
