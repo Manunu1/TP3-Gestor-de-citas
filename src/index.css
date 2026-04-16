@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Staatliches&display=swap');
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -11,12 +13,14 @@
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  /* Typography tokens */
+  --sans: 'Montserrat', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: 'Staatliches', cursive;
   --mono: ui-monospace, Consolas, monospace;
+  --letter-spacing: 0.6px; /* uniform tracking for body text */
 
   font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
+  letter-spacing: var(--letter-spacing);
   color-scheme: light dark;
   color: var(--text);
   background: var(--bg);
