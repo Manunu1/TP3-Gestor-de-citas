@@ -3,7 +3,7 @@ import Cita from "../Cita";
 const Listado = ({ ArrayCitas = [] }) => {
     return (
         <div>
-            {ArrayCitas && ArrayCitas.length > 0 ? ( //esto es un if
+            {ArrayCitas && ArrayCitas.length > 0 ? (
                 ArrayCitas.map((cita, i) => {
                     const [Mascota, Dueño, Fecha, Hora, Sintomas] = cita;
 
@@ -18,7 +18,7 @@ const Listado = ({ ArrayCitas = [] }) => {
                         />
                     );
                 })
-            ) : ( //este es el else
+            ) : (
                 <p>No hay citas todavía</p>
             )}
         </div>
