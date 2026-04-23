@@ -7,13 +7,8 @@ import Formulario from './Componentes/Formulario'
 import Listado from './Componentes/Listado'
 
 function App() {
-  const initialDatos = [
-    ['Nina','Martin','2021-08-05','08:20','Le duele la pierna'],
-    ['Sifon','Flecha','2023-08-05','09:24','Duerme mucho'],
-    ['Floki','Ari','2023-08-05','16:15','No está comiendo']
-  ];
 
-  const [citas, setCitas] = useState(initialDatos);
+  const [citas, setCitas] = useState([]);
 
   return (
     <>
@@ -25,12 +20,12 @@ function App() {
 
           <div>
             <h2>Crear mi cita</h2>
-            <Formulario />
+            <Formulario citas = {citas} setCitas = {setCitas} />
           </div>
 
           <div>
             <h2>Administra tus citas</h2>
-            <Listado ArrayCitas={citas} />
+            <Listado citas={citas} setCitas = {setCitas}/>
           </div>
 
         </div>

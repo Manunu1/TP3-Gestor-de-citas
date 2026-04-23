@@ -1,28 +1,19 @@
 import Cita from "../Cita";
 
-const Listado = ({ ArrayCitas = [] }) => {
+const Listado = ({citas, setCitas }) => {
     return (
         <div>
-            {ArrayCitas && ArrayCitas.length > 0 ? (
-                ArrayCitas.map((cita, i) => {
-                    const [Mascota, Dueño, Fecha, Hora, Sintomas] = cita;
-
-                    return (
-                        <Cita
-                            key={i}
-                            Mascota={Mascota}
-                            Dueño={Dueño}
-                            Fecha={Fecha}
-                            Hora={Hora}
-                            Sintomas={Sintomas}
-                        />
-                    );
-                })
-            ) : (
-                <p>No hay citas todavía</p>
-            )}
+            {citas.map((cita) => (
+                <Cita
+                    Mascota={cita.Mascota}
+                    Dueño={cita.Dueño}
+                    Fecha={cita.Fecha}
+                    Hora={cita.Hora}
+                    Sintomas={cita.Sintomas}
+                />
+            ))}
         </div>
-    );
-};
+    )
+}
 
 export default Listado;

@@ -1,21 +1,44 @@
 import './Formulario.css'
 
-function Formulario() {
+function Formulario({ citas, setCitas }) {
+
+    const agregarCita = (e) => {
+        e.preventDefault();
+
+        const formulario = e.target;
+
+        const nuevaCita = {
+            Mascota: formulario.mascota.value,
+            Dueño: formulario.propietario.value,
+            Fecha: formulario.fecha.value,
+            Hora: formulario.hora.value,
+            Sintomas: formulario.sintomas.value
+        }
+
+        setCitas([...citas, nuevaCita])
+
+        formulario.mascota.value = "";
+        formulario.propietario.value = "";
+        formulario.fecha.value = "";
+        formulario.hora.value = "";
+        formulario.sintomas.value = "";
+
+    }
 
     return (
 
         <div>
 
 
-            <form>
+            <form onSubmit={agregarCita}>
 
-                <label>Nombre Mascota</label><input type="text" name="mascota" className="u-full-width" placeholder="Nombre Mascota" value=""></input>
+                <label>Nombre Mascota</label><input type="text" name="mascota" className="u-full-width" placeholder="Nombre Mascota" ></input>
 
-                <label>Nombre Dueño</label><input type="text" name="propietario" className="u-full-width" placeholder="Nombre dueño de la mascota" value=""></input>
+                <label>Nombre Dueño</label><input type="text" name="propietario" className="u-full-width" placeholder="Nombre dueño de la mascota" ></input>
 
-                <label>Fecha</label><input type="date" name="fecha" className="u-full-width" value=""></input>
+                <label>Fecha</label><input type="date" name="fecha" className="u-full-width" ></input>
 
-                <label>hora</label><input type="time" name="hora" className="u-full-width" value=""></input>
+                <label>hora</label><input type="time" name="hora" className="u-full-width" ></input>
 
                 <label>Sintomas</label>
 
