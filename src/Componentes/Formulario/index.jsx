@@ -15,7 +15,7 @@ function Formulario({ citas, setCitas }) {
             Sintomas: formulario.sintomas.value
         }
 
-        setCitas([...citas, nuevaCita])
+        setCitas([...citas, nuevaCita]);
 
         formulario.mascota.value = "";
         formulario.propietario.value = "";
