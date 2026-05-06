@@ -8,7 +8,12 @@ import Listado from './Componentes/Listado'
 
 function App() {
 
-  const [citas, setCitas] = useState([]);
+  const [citas, setCitas] = useState(JSON.parse(localStorage.getItem('ListaCitas')) || []);
+
+
+   useEffect(() => {
+        localStorage.setItem('ListaCitas', citas);
+    }, [citas]);
 
   return (
     <>
